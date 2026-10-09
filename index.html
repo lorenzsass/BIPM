@@ -82,6 +82,38 @@
     </section>
     <section id="hobbies">
       <h2>Hobbies</h2>
+      <button popovertarget="mars" class="planet planet-mars">
+        <img src="images/hobbies/planet-mars.webp" alt="Game Jams">
+      </button>
+      <div id="mars" class="glass-popover" popover>
+        <h3>Game Jams</h3>
+      </div>
+      <button popovertarget="venus" class="planet planet-venus">
+        <img src="images/hobbies/planet-venus.webp" alt="Music Festivals">
+      </button>
+      <div id="venus" class="glass-popover" popover>
+        <h3 class="festival-title">Music Festivals</h3>
+        <img class="festival-foto1" src="…" alt="…">
+        <iframe class="festival-video1" src="https://www.youtube-nocookie.com/embed/P7T90qnj-R4" title="This is Defqon.1 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        <p class="festival-text">…</p>
+        <img class="festival-foto2" src="…" alt="…">
+        <iframe class="festival-video2" src="…" loading="lazy"></iframe>
+      </div>
+      <button popovertarget="garden" class="planet planet-garden">
+        <img src="images/hobbies/planet-garden.webp" alt="Gardening">
+      </button>
+      <div id="garden" class="glass-popover" popover>
+        <h3>Gardening</h3>
+        <p></p>
+      </div>
+      <div class="map-frame">
+        <div class="map-layer hobbies-layer">
+          <button popovertarget="astronomy" class="telescope" aria-label="Astronomy"></button>
+        </div>
+      </div>
+      <div id="astronomy" class="glass-popover" popover>
+        <h3>Astronomy</h3>
+      </div>
     </section>
     <section id="academic-journey">
       <h2>Academic Journey</h2>
@@ -95,7 +127,7 @@
       <p>Github: <a href="https://github.com/lorenzsass">https://github.com/lorenzsass</a></p>
     </div>
     <button popovertarget="credits">Image Credits</button>
-    <div id="credits" popover>
+    <div id="credits" class="glass-popover" popover>
       <p>Petrikirche Rostock: Photo by Moahim, Wikimedia Commons, CC BY-SA 4.0, cropped</p>
       <p>Aerial view of Qualitz: Photo by Gudrun Schützler, used with permission</p>
       <p>Hamburg, Speicherstadt: Photo by Dietmar Rabich, Wikimedia Commons, CC BY-SA 4.0, cropped</p>
