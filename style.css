@@ -84,6 +84,23 @@ footer button {
     background: rgba(0, 0, 0, 0.4);
 }
 
+.glass-popover h3 {
+    font-size: clamp(1.8rem, 3vw, 3rem);
+    font-weight: 900;
+    margin: 0 0 15px 0;
+}
+
+.glass-popover img {
+    width: 100%;
+    border-radius: 16px;
+    display: block;
+}
+
+.glass-popover p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
 #credits {
     font-size: 1rem;
 }
@@ -450,28 +467,44 @@ section:nth-child(3) h2 {
     scale: 1.15;
 }
 
-#venus:popover-open {
+.hobby-popover:popover-open {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas:  
-        "title  foto1"
-        "video1 text"
-        "foto2  video2";
+    grid-template-areas:
+        "title  media1"
+        "media2 text"
+        "media3 media4";
     gap: 20px;
 }
 
-#venus {
+.hobby-popover {
     max-width: min(1100px, 90vw);
     max-height: 85vh;
     overflow-y: auto;
 }
 
-.festival-title  { grid-area: title; }
-.festival-foto1  { grid-area: foto1; }
-.festival-video1 { grid-area: video1; }
-.festival-text   { grid-area: text; }
-.festival-foto2  { grid-area: foto2; }
-.festival-video2 { grid-area: video2; }
+.hobby-popover iframe,
+.hobby-popover img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.hobby-popover h3 {
+    align-self: center;
+    text-align: center;
+    font-size: clamp(2rem, 3.5vw, 4rem);
+    margin: 0;
+}
+
+.hobby-title  { grid-area: title; }
+.hobby-text   { grid-area: text; align-self: center; }
+.hobby-media1 { grid-area: media1; }
+.hobby-media2 { grid-area: media2; }
+.hobby-media3 { grid-area: media3; }
+.hobby-media4 { grid-area: media4; }
 
 /* === Academic Journey === */
 
