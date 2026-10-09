@@ -642,8 +642,15 @@ section:nth-child(4) {
         font-size: 1rem;
     }
 
+    .about-me-story {
+        width: min(26vw, 60vh);
+        padding: 12px 16px;
+    }
+
     .about-me-story p {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+        line-height: 1.4;
+        margin: 6px 0;
     }
 
     footer button {
