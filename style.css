@@ -617,3 +617,36 @@ section:nth-child(4) {
     border-radius: 6px;
     box-shadow: 0 0 20px rgba(110, 231, 242, 0.5);
 }
+
+/* === Kleine Bildschirme === */
+
+@media (max-height: 900px) {
+    header, footer {
+        padding: 10px;
+    }
+
+    section:nth-child(2) {
+        gap: 10px;
+    }
+
+    section:nth-child(2) h2 {
+        font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    }
+
+    .box img {
+        width: min(12vw, 17vh);
+    }
+
+    .born p, .raised p, .education p {
+        margin: 4px 0;
+        font-size: 1rem;
+    }
+
+    .about-me-story p {
+        font-size: 0.9rem;
+    }
+
+    footer button {
+        bottom: 10px;
+    }
+}
