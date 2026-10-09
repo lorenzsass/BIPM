@@ -625,3 +625,26 @@ section:nth-child(4) {
     border-radius: 6px;
     box-shadow: 0 0 20px rgba(110, 231, 242, 0.5);
 }
+
+/* === Popovers auf niedrigen Bildschirmen === */
+
+@media (max-height: 1000px) {
+    .hobby-popover:popover-open {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "title  media1  media2"
+            "text   media3  media4";
+    }
+
+    .hobby-popover {
+        max-width: min(1200px, 92vw);
+    }
+
+    .hobby-popover h3 {
+        font-size: clamp(1.5rem, min(3vw, 5vh), 3rem);
+    }
+
+    .hobby-popover p {
+        font-size: clamp(0.85rem, 1.5vh, 1rem);
+    }
+}
