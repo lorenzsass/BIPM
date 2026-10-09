@@ -123,6 +123,32 @@ section:nth-child(1) {
     margin: 0;
 }
 
+.scroll-hint {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.scroll-hint p {
+    margin: 0;
+    font-size: 0.8rem;
+    
+}
+
+.scroll-hint span {
+    font-size: 1.5rem;
+    animation: scroll-pfeil 2s ease-in-out infinite;
+    align-self: center;
+}
+
+@keyframes scroll-pfeil {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(12px);}
+    100% {transform: translateY(0);}
+}
+
 /* === About Me === */
 
 section:nth-child(2) {
