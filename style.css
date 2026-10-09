@@ -69,7 +69,7 @@ footer button {
     text-decoration: underline;
     position: absolute;
     right: 10%;
-    bottom: 20px;
+    bottom: clamp(8px, 1.5vh, 20px);
 }
 
 .glass-popover {
@@ -113,7 +113,7 @@ footer button {
 
 header, footer {
     background-color: #1f2547;
-    padding: 20px;
+    padding: clamp(8px, 1.5vh, 20px);
     color: white;
 }
 
@@ -217,12 +217,12 @@ section:nth-child(2) {
         "title  .  story"
         "born   .  story"
         "raised .  education";
-    gap: 20px;
+    gap: clamp(8px, 2vh, 20px);
     position: relative;
 }
 
 .box img {
-    width: min(15vw, 25vh);
+    width: min(15vw, calc(28vh - 60px));
     aspect-ratio: 1;
     object-fit: cover;
     border-radius: 16px;
@@ -244,12 +244,14 @@ section:nth-child(2) {
     font-weight: 900;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     text-align: center;
+    font-size: clamp(0.9rem, 2vh, 1.3rem);
+    margin: 0.8vh 0;
 }
 
 section:nth-child(2) h2 {
     grid-area: title;
     justify-self: center;
-    font-size: clamp(2rem, 3.5vw, 4rem);
+    font-size: clamp(1.5rem, min(3.5vw, 5vh), 4rem);
     font-weight: 900;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     margin: 0;
@@ -270,10 +272,16 @@ section:nth-child(2) h2 {
     background-color: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     border-radius: 20px;
-    padding: 20px;
-    width: min(18vw, 32vh);
+    padding: clamp(10px, 1.5vh, 20px) clamp(14px, 1.5vw, 20px);
+    width: clamp(340px, 18vw, 480px);
     justify-self: center;
     align-self: center;
+}
+
+.about-me-story p {
+    font-size: clamp(0.7rem, 1.6vh, 1.1rem);
+    line-height: 1.35;
+    margin: 0.6em 0;
 }
 
 .map-frame {
@@ -616,44 +624,4 @@ section:nth-child(4) {
     pointer-events: auto;
     border-radius: 6px;
     box-shadow: 0 0 20px rgba(110, 231, 242, 0.5);
-}
-
-/* === Kleine Bildschirme === */
-
-@media (max-height: 900px) {
-    header, footer {
-        padding: 10px;
-    }
-
-    section:nth-child(2) {
-        gap: 10px;
-    }
-
-    section:nth-child(2) h2 {
-        font-size: clamp(1.5rem, 2.5vw, 2.5rem);
-    }
-
-    .box img {
-        width: min(12vw, 17vh);
-    }
-
-    .born p, .raised p, .education p {
-        margin: 4px 0;
-        font-size: 1rem;
-    }
-
-    .about-me-story {
-        width: min(26vw, 60vh);
-        padding: 12px 16px;
-    }
-
-    .about-me-story p {
-        font-size: 0.8rem;
-        line-height: 1.4;
-        margin: 6px 0;
-    }
-
-    footer button {
-        bottom: 10px;
-    }
 }
